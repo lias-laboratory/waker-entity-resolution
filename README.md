@@ -1,4 +1,4 @@
-# WAKER — Weight Attribution based on Kolmogorov-Arnold Networks for Entity Resolution
+# WAKER: Weight Attribution based on Kolmogorov-Arnold Networks for Entity Resolution
 
 Code accompanying the paper:
 
@@ -17,10 +17,10 @@ This repository implements an ER pipeline that computes attribute-level
 similarities and compares three ways of aggregating them into a
 match / non-match decision:
 
-- **Uniform weighting** — every attribute contributes equally to the score.
-- **Expert-defined (manual) weighting** — importance scores assigned from
+- **Uniform weighting** every attribute contributes equally to the score.
+- **Expert-defined (manual) weighting** importance scores assigned from
   domain knowledge.
-- **KAN-learned weighting** — a Kolmogorov-Arnold Network (KAN) is trained
+- **KAN-learned weighting** a Kolmogorov-Arnold Network (KAN) is trained
   on labeled pairs, and per-attribute importance is derived from it via a
   leave-one-out analysis; those weights are then used to compute the score.
 
@@ -50,7 +50,7 @@ benchmark layout, e.g. iTunes-Amazon):
 - `tableA.csv`, `tableB.csv` — one row per record, with at least these
   columns: `Song_Name`, `Artist_Name`, `Album_Name`, `Genre`, `Price`,
   `CopyRight`, `Time`, `Released`.
-- `train.csv`, `valid.csv`, `test.csv` — pair labels, with columns
+- `train.csv`, `valid.csv`, `test.csv`  pair labels, with columns
   `ltable_id`, `rtable_id` (row indices into `tableA` / `tableB`) and
   `label` (`0`/`1`).
 
