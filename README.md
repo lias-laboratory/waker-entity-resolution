@@ -65,6 +65,36 @@ Install the required dependencies: `pip install -r requirements.txt`
 
 ---
 
+
+## Installation
+
+```bash
+git clone https://github.com/lias-laboratory/waker-entity-resolution.git
+cd waker-entity-resolution
+
+python -m venv .venv
+source .venv/bin/activate   # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+## Usage
+
+Point the script at your dataset folder (the one containing `tableA.csv`,
+`tableB.csv`, `train.csv`, `valid.csv`, `test.csv`), then run it directly:
+
+```bash
+export WAKER_DATA_DIR=/path/to/iTunes   # Windows: $env:WAKER_DATA_DIR="C:\path\to\iTunes"
+python3 waker_experiment.py
+```
+
+If `WAKER_DATA_DIR` is not set, the script falls back to the `base_path`
+hardcoded at the top of `waker_experiment.py` edit it there if you'd
+rather not use an environment variable.
+
+The script prints, for each of the four setups, the tuned threshold and
+the accuracy / precision / recall / F1 on validation and test, followed by
+a summary comparison table.
+
 ## Repository structure
 
 ```
@@ -74,6 +104,13 @@ Install the required dependencies: `pip install -r requirements.txt`
 ├── requirements.txt
 └── README.md
 ```
+
+## Topics
+
+`entity-resolution` · `data-lake` · `data-quality` · `attribute-weighting` ·
+`kolmogorov-arnold-networks` · `kan` · `sentence-transformers` ·
+`record-linkage` · `deep-learning` · `pytorch`
+
 
 ## Citation
 
